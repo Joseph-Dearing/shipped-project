@@ -1,0 +1,15 @@
+<h1> All Jobs </h1>
+<%= link_to 'Post New Job', new_job_path %>
+<%= link_to 'Boats List', boats_path %>
+
+<h3>Job List: </h3>
+<% @jobs.each do |j| %>
+<div class="job-card">
+ <div>Job Name: <%= j.description %></div>
+ <div>Destination: <%= j.destination%></div>
+ <div>Cost: <%= j.cost %></div>
+ <div>Containers Needed: <%= j.containers%></div><br>
+ <a href="/jobs/<%=j.id%>/edit"><b>Edit Job</b></a>
+ <b><%= link_to "Delete Job", job_path(j.id), method: :delete, data: {confirm: "Delete Job Listing?"}%></b>
+</div>
+<% end %>

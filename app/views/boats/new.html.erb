@@ -1,0 +1,10 @@
+<h1> Add Your Boat </h1>
+
+<%= form_for @boat, html: {multipart: true} do |f| %>
+
+Boat name:<%= f.text_field :name %><br>
+Boat location: <%= f.text_field :location %><br>
+# of containers <%= f.text_field :max_containers %><br>
+
+<%= f.submit "Create Boat" %>
+<% end %>

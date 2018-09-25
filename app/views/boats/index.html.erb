@@ -1,0 +1,14 @@
+<a href="/signout/">Sign Out</a>
+<%= link_to 'New Boat', new_boat_path %>
+<%= link_to 'Jobs', jobs_path %>
+<h1>Welcome To Boats!</h1>
+
+<h3>Boat List: </h3>
+<% @boats.each do |b| %>
+<div class="job-card">
+ <div>Boat Name: <%= b.name %></div>
+ <div>Location: <%= b.location%></div><br>
+  <a href="/boats/<%=b.id%>/edit"><b>Edit Boat</b></a><br>
+  <b><%= link_to "Delete Boat", boat_path(b.id), method: :delete, data: {confirm: "Delete Boat?"}%></b>
+</div>
+<% end %>

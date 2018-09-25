@@ -1,0 +1,12 @@
+<h1>Boat Shipping Job Positions</h1>
+
+<%= form_for @job, html: {multipart: true} do |f| %>
+
+Job description:<%= f.text_field :description %><br>
+Origin: <%= f.text_field :origin %><br>
+Destination: <%= f.text_field :destination %><br>
+Cost: <%= f.text_field :cost %>
+Containers Needed: <%= f.text_field :containers %>
+
+<%= f.submit "Create Job" %>
+<% end %>
