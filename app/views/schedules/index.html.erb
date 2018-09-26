@@ -1,10 +1,8 @@
 <h1> Schedules </h1>
-<%= link_to 'Job List', jobs_path %>
-<%= link_to 'Boats List', boats_path %>
-<%= link_to 'Schedules', schedules_path %>
-<%= link_to 'Add Schedule',  new_schedule_path %>
 
-<h3>Schedules</h3>
+<%= button_to "Add a Schedule", new_schedule_path, :method => "get" %>
+
+
 <% @schedules.each do |s| %>
 <div class="schedule-card">
  <div>Boat: <%= s.boat_id %></div>

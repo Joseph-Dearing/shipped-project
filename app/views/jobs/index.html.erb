@@ -1,9 +1,8 @@
-<h1> All Jobs </h1>
-<%= link_to 'Post New Job', new_job_path %>
-<%= link_to 'Boats List', boats_path %>
-<%= link_to 'Schedules', schedules_path %>
+<h1> All Available Jobs </h1>
+<h2>Job List: </h2>
+<%= button_to "Create A Job", new_job_path, :method => "get" %>
 
-<h3>Job List: </h3>
+
 <% @jobs.each do |j| %>
 <div class="job-card">
  <div>Job Name: <%= j.description %></div>

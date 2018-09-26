@@ -10,6 +10,17 @@
   </head>
 
   <body>
+      <div class="navbar">
+        <ul class="navbuttons">
+          <li><a href="/signout/">Sign Out</a></li>
+          <li><%= link_to 'Edit User', edit_user_registration_path %></li>
+          <li><%=link_to 'Job List', jobs_path %></li>
+          <li><%= link_to 'Boats List', boats_path %></li>
+          <li><%= link_to 'Schedules', schedules_path %></li>
+        </ul>
+      </div>
+    </div>
+  </header>
     <%= yield %>
   </body>
 </html>

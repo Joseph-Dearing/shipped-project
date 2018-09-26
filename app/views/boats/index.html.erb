@@ -1,15 +1,13 @@
-<a href="/signout/">Sign Out</a>
-<%= link_to 'New Boat', new_boat_path %>
-<%= link_to 'Jobs', jobs_path %>
-<%= link_to 'Schedules', schedules_path %>
+<h1>All Available Boats</h1>
+<h2>Boat List: </h2>
+<%= button_to "Create A Boat", new_boat_path, :method => "get" %>
 
-<h1>Welcome To Boats!</h1>
-
-<h3>Boat List: </h3>
 <% @boats.each do |b| %>
 <div class="job-card">
  <div>Boat Name: <%= b.name %></div>
  <div>Location: <%= b.location%></div><br>
+<%= image_tag( root_url + "desktop/boat.jpg", size: "50x50", :alt => "rss feed") -%>
+
   <a href="/boats/<%=b.id%>/edit"><b>Edit Boat</b></a><br>
   <b><%= link_to "Delete Boat", boat_path(b.id), method: :delete, data: {confirm: "Delete Boat?"}%></b>
 </div>
