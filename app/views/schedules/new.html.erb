@@ -1,0 +1,11 @@
+<h1>Available Schedules</h1>
+
+<%= form_for :schedule, url: {action:"create", controller:"schedules"} do |f| %>
+
+Boat:<%= f.select :boat_id, options_from_collection_for_select( @boats, "id", "name") %><br>
+Job: <%= f.select :job_id, options_from_collection_for_select( @jobs, "id", "description") %><br>
+Start Time: <%= f.datetime_field :start %><br>
+Finish Time: <%= f.datetime_field :finish %>
+
+<%= f.submit "Create Scheduled Time" %>
+<% end %>

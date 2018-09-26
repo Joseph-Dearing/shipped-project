@@ -1,0 +1,11 @@
+<h1>Update Schedule #<%=@job.id%></h1>
+
+<%= form_for @schedule, html: {multipart: true} do |f| %>
+
+Boat:<%= f.text_field :boat_id %><br>
+Job: <%= f.text_field :job_id %><br>
+Start Time: <%= f.text_field :start %><br>
+Finish Time: <%= f.text_field :finish %>
+
+<%= f.submit "Update Schedule" %>
+<% end %>
