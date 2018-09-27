@@ -4,7 +4,8 @@
 
 Boat name:<%= f.text_field :name %><br>
 Boat location: <%= f.text_field :location %><br>
-# of containers <%= f.text_field :max_containers %><br>
+# of containers: <%= f.text_field :max_containers %><br>
+Enter boat image: <%= f.file_field :image %>
 
 <%= f.submit "Create Boat" %>
 <% end %>
